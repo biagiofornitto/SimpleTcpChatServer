@@ -4,7 +4,7 @@
 > This a very simple chat server that listens on TCP port 10000 for clients. The chat protocol is very simple, clients connect with "telnet" and write single lines of text. On each new line of text, the server will broadcast that line to all other connected clients.
 
 ## Configuration
-  If you want you can modify default ip and port in configuration.ini file 
+  If you want you can modify default host-ip and port in resources/configuration.ini file 
 
 
 ## Test
