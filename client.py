@@ -1,12 +1,21 @@
 import socket
 import threading
+import configparser
+
+config_parser = configparser.ConfigParser()
+config_parser.read('./resources/configuration.ini')
+
+# Connection Data
+host = config_parser.get('CONNECTION_DATA', 'host')
+port = int(config_parser.get('CONNECTION_DATA', 'port'))
+
 
 # Choosing Username
 username = input("Choose your username: ")
 
 # Connecting To Server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 10000))
+client.connect((host, port))
 
 
 # Listening to Server and Sending Username
